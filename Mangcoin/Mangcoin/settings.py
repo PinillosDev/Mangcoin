@@ -77,10 +77,28 @@ WSGI_APPLICATION = 'Mangcoin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# Some data use here is private, so the project use configparser. With configparser the AWS database's data stays hide
+# Just create a config.ini on this file and dump your data there :)
+# Here the doc: https://zetcode.com/python/configparser/
+
+import configparser
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+name = config['mysql-mangcoin-instance']['databaseName']
+user = config['mysql-mangcoin-instance']['user']
+password = config['mysql-mangcoin-instance']['password']
+host = config['mysql-mangcoin-instance']['host']
+port = config['mysql-mangcoin-instance']['port']
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': name,
+        'USER': user,
+        'PASSWORD': password,
+        'HOST': host,
+        'PORT': port
     }
 }
 
