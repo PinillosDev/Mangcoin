@@ -12,6 +12,7 @@
 /Mangcoin/apps/tokens/migrations/__pycache__/__init__.cpython-38.pyc
 /Mangcoin/apps/tokens/migrations/__pycache__/0001_initial.cpython-38.pyc
 /Mangcoin/apps/tokens/migrations/__pycache__/0002_alter_tokens_total_aumont.cpython-38.pyc
+/Mangcoin/apps/tokens/migrations/__pycache__/0003_alter_tokens_total_aumont.cpython-38.pyc
 
 
 # These files will be created again when you make a migration (transactions)
@@ -31,3 +32,15 @@
 /Mangcoin/Mangcoin/__pycache__/settings.cpython-38.pyc
 /Mangcoin/Mangcoin/__pycache__/urls.cpython-38.pyc
 /Mangcoin/Mangcoin/__pycache__/wsgi.cpython-38.pyc
+
+# These files will be created again when you make a migration (coins)
+/Mangcoin/apps/coin/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/coin/__pycache__/admin.cpython-38.pyc
+/Mangcoin/apps/coin/__pycache__/apps.cpython-38.pyc
+/Mangcoin/apps/coin/__pycache__/models.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/0001_initial.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/0002_rename_balance_coins_balance_equity.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/0003_alter_coins_is_stablecoin.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/0004_alter_coins_is_stablecoin.cpython-38.pyc
+/Mangcoin/apps/coin/migrations/__pycache__/0005_coins_description.cpython-38.pyc

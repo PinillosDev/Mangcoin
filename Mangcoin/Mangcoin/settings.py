@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Apps created
     'apps.tokens',
     'apps.transactions',
+    'apps.coin',
 ]
 
 MIDDLEWARE = [
