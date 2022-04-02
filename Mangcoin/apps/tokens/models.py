@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class tokens(models.Model):
+    token_id = models.CharField(max_length=10, primary_key=True)
+    token_name = models.CharField(max_length=255)
+    fundation_year = models.PositiveSmallIntegerField(blank=True)
+    total_aumont = models.PositiveBigIntegerField(blank=True)

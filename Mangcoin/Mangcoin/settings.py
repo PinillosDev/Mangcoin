@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Apps created
     'apps.tokens',
     'apps.transactions',
+    'apps.coin',
 ]
 
 MIDDLEWARE = [
@@ -79,26 +80,31 @@ WSGI_APPLICATION = 'Mangcoin.wsgi.application'
 
 # Some data use here is private, so the project use configparser. With configparser the AWS database's data stays hide
 # Just create a config.ini on this file and dump your data there :)
-# Here the doc: https://zetcode.com/python/configparser/
+# Here the doc:
+# https://zetcode.com/python/configparser/ | https://stackoverflow.com/questions/53222413/python-configparser-raise-keyerror-key
 
 import configparser
-config = configparser.ConfigParser()
-config.read('config.ini')
+import os
 
-name = config['mysql-mangcoin-instance']['databaseName']
-user = config['mysql-mangcoin-instance']['user']
-password = config['mysql-mangcoin-instance']['password']
-host = config['mysql-mangcoin-instance']['host']
-port = config['mysql-mangcoin-instance']['port']
+path = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
+config = configparser.ConfigParser()
+config.read(os.path.join(path, 'config.ini'))
+
+DBname = config['mysql_mangcoin_instance']['name']
+DBuser = config['mysql_mangcoin_instance']['user']
+DBpassword = config['mysql_mangcoin_instance']['password']
+DBhost = config['mysql_mangcoin_instance']['host']
+DBport = config['mysql_mangcoin_instance']['port']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': name,
-        'USER': user,
-        'PASSWORD': password,
-        'HOST': host,
-        'PORT': port
+        'NAME': DBname,
+        'USER': DBuser,
+        'PASSWORD': DBpassword,
+        'HOST': DBhost,
+        'PORT': DBport,
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
     }
 }
 
@@ -127,7 +133,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -143,3 +149,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Change the data input format. Y-m-d -> m/d/Y
+DATE_INPUT_FORMATS = ['%m/d/Y']
