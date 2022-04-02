@@ -1,2 +1,33 @@
+# virtual environment
 /venv
+
+# The AWS' RDS information for connection is here
 /Mangcoin/Mangcoin/config.ini
+
+# These files will be created again when you make a migration (tokens)
+/Mangcoin/apps/tokens/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/tokens/__pycache__/admin.cpython-38.pyc
+/Mangcoin/apps/tokens/__pycache__/apps.cpython-38.pyc
+/Mangcoin/apps/tokens/__pycache__/models.cpython-38.pyc
+/Mangcoin/apps/tokens/migrations/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/tokens/migrations/__pycache__/0001_initial.cpython-38.pyc
+/Mangcoin/apps/tokens/migrations/__pycache__/0002_alter_tokens_total_aumont.cpython-38.pyc
+
+
+# These files will be created again when you make a migration (transactions)
+/Mangcoin/apps/transactions/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/transactions/__pycache__/admin.cpython-38.pyc
+/Mangcoin/apps/transactions/__pycache__/apps.cpython-38.pyc
+/Mangcoin/apps/transactions/__pycache__/models.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/0001_initial.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/0002_alter_transactions_destiny_alter_transactions_origin.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/0003_alter_transactions_transaction_date.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/0004_alter_transactions_currently_token_price_and_more.cpython-38.pyc
+/Mangcoin/apps/transactions/migrations/__pycache__/0005_alter_transactions_currently_token_price.cpython-38.pyc
+
+# These files will be created again when you make a migration (Mangcoin/__pycache__)
+/Mangcoin/Mangcoin/__pycache__/__init__.cpython-38.pyc
+/Mangcoin/Mangcoin/__pycache__/settings.cpython-38.pyc
+/Mangcoin/Mangcoin/__pycache__/urls.cpython-38.pyc
+/Mangcoin/Mangcoin/__pycache__/wsgi.cpython-38.pyc
